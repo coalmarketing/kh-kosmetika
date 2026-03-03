@@ -1,8 +1,9 @@
 ---
 layout: "pages/terminy.njk"
 
-title: "O nás"
-description: "V Senoweb se specializujeme na tvorbu webových stránek na míru. Nepoužíváme koupené šablony, nástroje pro automatizované budování webů ani nástroje, které by váš web zahlcovali zbytečným kódem a tím vaší stránku zpomalovaly."
+title: "Uvolněné termíny"
+description: "Mým cílem je nejen Vám dopřát opravdový odpočinek, ale hlavně se
+  postarat o vaši pleť tak, aby byla zdravá a zářivá."
 permalink: "uvolnene-terminy/"
 
 eleventyNavigation:

@@ -1,9 +1,10 @@
 ---
 layout: "pages/sluzby.njk"
 
-title: 'Služby'
-description: 'V Senoweb se specializujeme na tvorbu webových stránek na míru. Nepoužíváme koupené šablony, nástroje pro automatizované budování webů ani nástroje, které by váš web zahlcovali zbytečným kódem a tím vaší stránku zpomalovaly.'
-permalink: 'sluzby/'
+title: "Služby"
+description: "Mým cílem je nejen Vám dopřát opravdový odpočinek, ale hlavně se
+  postarat o vaši pleť tak, aby byla zdravá a zářivá."
+permalink: "sluzby/"
 
 eleventyNavigation:
   key: Služby
