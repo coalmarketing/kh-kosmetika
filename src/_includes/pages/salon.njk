@@ -1,0 +1,174 @@
+{% extends "layouts/base.njk" %} {% block body %}
+
+<!-- SLUZBY  -->
+
+<section id="salon">
+  <div class="hero ~pt-16/24">
+    <img
+      class="m-auto w-[300px] max-w-[50%] -mb-[2px]"
+      src="/assets/svgs/Logo.svg"
+      alt="KH - kosmetické studio"
+      width="420"
+      height="210"
+      loading="lazy"
+      decoding="async"
+      aria-hidden="true"
+      draggable="false"
+    />
+  </div>
+  <h2>představte<br />si to...</h2>
+
+  <div class="lg:w-1/2">
+    <div class="max-lg:px-[10vw] lg:pl-[14vw]">
+      <p>
+        Přijdete do salonu, lehnete si na vyhřáté lehátko, zabalení do té
+        nejjemnější deky, a kolem vás se line neodolatelná vůně…
+      </p>
+    </div>
+  </div>
+
+  <!-- carousel -->
+
+  <div class="relative w-full mx-auto">
+    <!-- VIEWPORT -->
+    <div class="embla overflow-hidden">
+      <div class="embla__container flex">
+        {% for i in [1,2,3,4,5,6,7,8] %}
+        <div
+          class="embla__slide flex-[0_0_75%] md:flex-[0_0_50%] lg:flex-[0_0_40%] px-1"
+        >
+          <div
+            class="aspect-[4/3] w-full overflow-hidden rounded-2xl bg-neutral-100"
+          >
+            <img
+              src="/assets/images/ci-{{ i }}.jpg"
+              alt=""
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- ARROWS -->
+
+    <div class="flex items-center justify-center mt-6 gap-6">
+      <button class="embla-prev aspect-square z-10 p-2 rounded-full">
+        <img
+          class="rotate-180 transition-none"
+          src="/assets/svgs/Arrow.svg"
+          alt="arrow"
+          width="32"
+          height="23"
+          loading="lazy"
+          decoding="async"
+          aria-hidden="true"
+          draggable="false"
+        />
+      </button>
+
+      <span class="text-xl font-baskervville">prohlédněte si salon</span>
+
+      <button class="embla-next aspect-square z-10 p-2 rounded-full">
+        <img
+          src="/assets/svgs/Arrow.svg"
+          alt="arrow"
+          width="32"
+          height="23"
+          loading="lazy"
+          decoding="async"
+          aria-hidden="true"
+          draggable="false"
+        />
+      </button>
+    </div>
+  </div>
+
+  <!-- end carousel -->
+
+  <div class="split reverse">
+    <div>
+      <img class=" " src="/assets/images/DSC06906.png" alt="" />
+    </div>
+    <div>
+      <p>
+        Pečlivě vybraný olej jemně vyživuje a hýčká vaši pleť, zatímco v pozadí
+        hraje klidný cover vašich oblíbených písní. V tu chvíli zapomenete na
+        celý svět.
+      </p>
+      <p>
+        Pro každé roční období měním oleje, aby vaše pleť dostala přesně to, co
+        v daném roční období potřebuje . Tyto oleje jsou plné živin a skvěle
+        doplní produkty Cosmedix.
+      </p>
+      <p>
+        Nezapomněla jsem ani na atmosféru v prostoru salonu – nové éterické
+        oleje, které voní po lese a jemném koření, vás přivítají ihned po
+        vstupu.
+      </p>
+      <p>
+        Každá pleť je jedinečná a zaslouží si osobní přístup. Proto společně
+        vybereme ošetření, které přesně odpovídá vašim potřebám. Pečlivě vybrané
+        produkty a techniky zajistí, že vaše pleť bude hluboce vyživená,
+        hydratovaná a zářivá, což vám dodá pocit krásy a sebevědomí.
+      </p>
+      <p>
+        Po ošetření vás čeká šálek horkého čaje, který dokonale podtrhne váš
+        zážitek. Posadíte se, v klidu si vychutnáte tuhle malou chvilku pro sebe
+        a budete si připadat jako v té nejpohodlnější kavárně.
+      </p>
+      <p>
+        Protože váš relax by měl být naprosto dokonalý od začátku až do konce.
+      </p>
+    </div>
+  </div>
+
+  <h2>dovolte si<br />odpočívat</h2>
+
+  <div class="lg:w-1/2">
+    <div class="max-lg:px-[10vw] lg:pl-[14vw]">
+      <p>
+        O své tělo pečujeme s láskou – dopřáváme mu pohyb, staráme se o něj
+        krémy a oleji. Věci kolem sebe udržujeme, leštíme a zbavujeme prachu,
+        aby byly krásné.
+      </p>
+      <p>
+        Ale co naše mysl? V salonu vám nabízíme nejen péči o pleť, která během
+        procedury dostane všechny potřebné živiny, ale také prostor pro
+        relaxaci.
+      </p>
+      <p>
+        Protože k čemu by nám bylo krásná pleť a tělo, když si ho kvůli neklidné
+        mysli neumíme naplno vychutnat?
+      </p>
+    </div>
+  </div>
+
+  <div class="split">
+    <div class="lg:pr-[7vw]">
+      <img class=" " src="/assets/images/DSC06924.png" alt="" />
+    </div>
+    <div class="flex !px-0">
+      <div
+        class="w-full flex lg:outline outline-1 border-black items-center max-lg:justify-center py-8 lg:py-20 mx-auto"
+      >
+        <a class="btn flex lg:ml-[clamp(2rem,10vw,48rem)] my-8" href="/sluzby"
+          >služby a ceny
+          <img
+            class="ml-4"
+            src="/assets/svgs/Arrow.svg"
+            alt="arrow"
+            width="32"
+            height="23"
+            loading="lazy"
+            decoding="async"
+            aria-hidden="true"
+            draggable="false"
+        /></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock body %}

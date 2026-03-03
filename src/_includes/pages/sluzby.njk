@@ -1,12 +1,193 @@
-{% extends "layouts/base.njk" %}
+{% extends "layouts/base.njk" %} {% block body %}
 
-{% block body %}
-    {% include "sections/landing.njk" %}
+<!-- SLUZBY  -->
 
-    <!-- SERVICES -->
-    <section class="~py-16/24 ~px-4/8">
-        <div class="container m-auto"></div>
-    </section>
+<section id="sluzby">
+  <div class="hero ~pt-16/24">
+    <img
+      class="m-auto w-[300px] max-w-[50%] -mb-[2px]"
+      src="/assets/svgs/Logo.svg"
+      alt="KH - kosmetické studio"
+      width="420"
+      height="210"
+      loading="lazy"
+      decoding="async"
+      aria-hidden="true"
+      draggable="false"
+    />
+  </div>
 
-    {% include "sections/cta.njk" %}
+  <h2>služby<br />a ceny</h2>
+
+  <div class="lg:w-1/2">
+    <div class="max-lg:px-[10vw] lg:pl-[14vw]">
+      <p>
+        Každá plet’ je jedinečná a zaslouží si osobní přístup. Proto společně
+        vybereme ošetření, které přesně odpovídá vašim potřebám.
+      </p>
+      <p>
+        <b>Po rozbalení níže najdete přehledně rozdělené služby</b> od prvního
+        ošetření až po základní i intenzivní péči. K dispozici jsou také
+        doplňkové procedury, liftingová ošetření, peelingy, konzultace vašich
+        domácích produktů i
+        <b
+          >možnost zakoupení kosmetických produktů COSMEDIX nebo dárkových
+          poukazů</b
+        >
+        pro vaše blízké.
+      </p>
+    </div>
+  </div>
+
+  <div
+    class="tabs flex flex-col items-stretch w-full lg:flex-row px-8 my-8 md:my-16 sm:px-[clamp(4rem,10vw,14rem)] lg:px-[14vw]"
+  >
+    <div class="flex-auto lg:pr-28">
+      <ul>
+        <li>
+          <a href=""
+            ><span>Chci <u>první</u> ošetření</span></a
+          >
+        </li>
+        <li>
+          <a class="active" href=""
+            ><span>Chci <u>základní</u> ošetření</span></a
+          >
+        </li>
+        <li>
+          <a href=""
+            ><span>Chci <u>intenzivní</u> ošetření</span></a
+          >
+        </li>
+        <li><a href="">Lifting</a></li>
+        <li><a href="">Peeling</a></li>
+        <li><a href="">Doplňkové služby</a></li>
+      </ul>
+    </div>
+    <div class="flex-auto">
+      <p class="text-2xl leading-loose">2 100 Kč<br />90 min.</p>
+
+      <p>
+        Základní ošetření je ideální volbou pro klienty, kteří kosmetiku
+        Cosmedix zatím doma nepoužívají.
+      </p>
+      <p>
+        Cílem ošetření je poznání pleti, její důkladné vyčištění a nastavení
+        správné péče podle aktuálního stavu a potřeb.
+      </p>
+      <ul>
+        Průběh ošetření:
+        <li>konzultace k pleti a zhodnocení jejího stavu</li>
+        <li>dvoufázové čištění pleti</li>
+        <li>hloubkové čištění pomocí ultrazvukové špachtle</li>
+        <li>
+          uvolňující masáž obličeje olejem vybraným dle typu a stavu pleti
+        </li>
+        <li>maska přizpůsobená aktuálním potřebám pleti</li>
+        <li>krátká relaxační masáž hlavy a rukou</li>
+        <li>aplikace séra a závěrečného krému</li>
+      </ul>
+      <p>
+        Toto ošetření poskytuje pleti pevný základ a připravuje ji na
+        intenzivnější péči.
+      </p>
+    </div>
+  </div>
+
+  <p class="h2">zjistěte více<br />o službách</p>
+
+  <div class="split reverse">
+    <div>
+      <img class=" " src="/assets/images/DSC06977.png" alt="" />
+    </div>
+    <div>
+      <h3>lifting - omlazení<br />bez jehel</h3>
+      <p>
+        Manuální lifting obličeje (omlazení bez jehel) je přirozená metoda
+        omlazení obličeje bez jehel, přístrojů a invazivních zásahů. Provádí se
+        na sucho, pomocí speciálních masážních a liftingových technik.
+      </p>
+      <ul>
+        Cílem ošetření je:
+        <li>
+          intenzivní manuální lifting: uvolnění svalového napětí v obličeji,
+          krku a dekoltu
+        </li>
+        <li>
+          zlepšení prokrvení a okysličení tkání podpora přirozené tvorby
+          kolagenu
+        </li>
+        <li>viditelné vyhlazení rysů a svěžejší vzhled</li>
+      </ul>
+      <p>Výsledkem je odpočatý, projasněný a přirozeně vypnutý obličej.</p>
+    </div>
+  </div>
+
+  <div class="split">
+    <div>
+      <img class=" " src="/assets/images/DSC06986.png" alt="" />
+    </div>
+    <div>
+      <h3>peeling - šetrná<br />obnova pleti</h3>
+      <p>
+        Metabolické peelingy COSMEDIX jsou řízená obnova pleti bez agresivního
+        olupování.
+      </p>
+      <p>
+        Metabolické peelingy Cosmedix podporují přirozenou regeneraci pleti,
+        aktivují buněčný metabolismus a zlepšují její strukturu, tón i celkovou
+        kvalitu. Ošetření jsou šetrná, ale velmi účinná – bez nutnosti
+        rekonvalescence.
+      </p>
+    </div>
+  </div>
+
+  <div class="split reverse">
+    <div>
+      <img class=" " src="/assets/images/DSC06878.png" alt="" />
+    </div>
+
+    <div>
+      <h3>produkty<br />COSMEDIX</h3>
+      <p>
+        Manuální lifting obličeje (omlazení bez jehel) je přirozená metoda
+        omlazení obličeje bez jehel, přístrojů a invazivních zásahů. Provádí se
+        na sucho, pomocí speciálních masážních a liftingových technik.
+      </p>
+      <ul>
+        Cílem ošetření je:
+        <li>
+          intenzivní manuální lifting: uvolnění svalového napětí v obličeji,
+          krku a dekoltu
+        </li>
+        <li>
+          zlepšení prokrvení a okysličení tkání podpora přirozené tvorby
+          kolagenu
+        </li>
+        <li>viditelné vyhlazení rysů a svěžejší vzhled</li>
+      </ul>
+      <p>Výsledkem je odpočatý, projasněný a přirozeně vypnutý obličej.</p>
+    </div>
+  </div>
+
+  <div class="split">
+    <div>
+      <img class=" " src="/assets/images/DSC06999.png" alt="" />
+    </div>
+    <div>
+      <h3>darujte péči -<br />dárkový poukaz</h3>
+      <p>
+        Dárkový poukaz je skvělou možností, jak potěšit někoho blízkého a dopřát
+        mu chvíli péče a relaxace.
+      </p>
+      <p>
+        Poukazy nabízím na všechny mé služby a kosmetické produkty – stačí se mi
+        jednoduše ozvat <b>telefonicky nebo e-mailem</b> a ráda vám poukaz
+        připravím k osobnímu vyzvednutí. Poukazy jsou přenosné a mají stanovenou
+        dobu platnosti pro jejich využití.
+      </p>
+    </div>
+  </div>
+</section>
+
 {% endblock body %}

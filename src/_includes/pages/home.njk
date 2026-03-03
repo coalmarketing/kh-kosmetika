@@ -1,0 +1,226 @@
+{% extends "layouts/base.njk" %} {% block head %}
+<!-- To ensure proper validation, prevent errors, and encourage developers to check, schema's are an opt-in feature. They're very bespoke and requires some customising  -->
+<!-- Uncomment the code below to enable Structured Data, and test it when you deploy to Netlify - https://developers.google.com/search/docs/appearance/structured-data -->
+{% include "components/home-schema.njk" %} {% endblock %} {% block body %}
+<!-- SECTION -->
+<section class="relative h-screen w-full overflow-hidden" id="uvod">
+  <!-- Background video -->
+  <video
+    class="absolute inset-0 w-full h-full object-cover"
+    autoplay
+    muted
+    loop
+    playsinline
+  >
+    <source
+      src="/assets/video/video-kristyna-hromadkova-web.webm"
+      type="video/webm"
+    />
+  </video>
+
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-white/30"></div>
+
+  <!-- Obsah -->
+  <div
+    class="relative z-10 h-full flex flex-col items-center justify-center text-white text-center p-6"
+  >
+    <img
+      class="m-auto w-[80%] max-w-[800px]"
+      src="/assets/svgs/Logo.svg"
+      alt="KH - kosmetické studio"
+      width="420"
+      height="210"
+      loading="lazy"
+      decoding="async"
+      aria-hidden="true"
+      draggable="false"
+    />
+
+    <p class="text-6xl mb-6 text-grey font-baskervville">vítejte</p>
+
+    <a href="/#o-mne">
+      <img
+        class="block max-lg:h-32 w-auto max-w-none object-fit animate-pulse"
+        src="/assets/svgs/Arrow_scroll.svg"
+        alt="kontaktní informace"
+        width="86"
+        height="83"
+        loading="lazy"
+        decoding="async"
+        aria-hidden="true"
+        draggable="false"
+      />
+    </a>
+  </div>
+</section>
+
+<section id="o-mne" class="pt-[1px]">
+  <h2 class=" ">cesta ke<br />krásné pleti</h2>
+
+  <div class="split">
+    <div class="!px-[10vw] lg:!pl-[14vw] lg:!pr-0">
+      <p>
+        Vítejte v mém salonu, který se nachází v dřevěném srubu ve Veselí u
+        Přelouče.
+      </p>
+
+      <p>
+        Mým cílem je nejen Vám dopřát opravdový odpočinek, ale hlavně se
+        postarat o vaši pleť tak, aby byla zdravá a zářivá.
+      </p>
+
+      <p>
+        A protože správná péče o pleť nekončí v salonu, ráda Vás naučím, jak se
+        o pleť starat i doma. Vysvětlím Vám, jak používat produkty, a nabízím i
+        následnou kontrolu, abychom si byli jistí, že vše probíhá správně.
+      </p>
+
+      <p>
+        Těším se na vaši návštěvu – věřím, že si tuhle péči užijete stejně jako
+        já.
+      </p>
+
+      <img
+        class="revealed mr-auto my-20 max-sm:w-2/3 w-1/2"
+        src="/assets/svgs/Signature.svg"
+        alt="Kristýna Hromádková"
+        width="193"
+        height="110"
+        loading="lazy"
+        decoding="async"
+        aria-hidden="true"
+        draggable="false"
+      />
+
+      <p>
+        Vystudovala jsem obor kosmetičky, protože jsem sama prošla náročnou
+        cestou s vlastní pletí a chtěla jsem se naučit, jak o ni co nejlépe
+        pečovat. A tato vášeň mě provází dodnes.
+      </p>
+
+      <p>
+        U mě v salonu vás čeká jiný přístup – mým cílem je vše vám srozumitelně
+        vysvětlit, abyste své pleti skutečně rozuměli. Chci být vaším průvodcem
+        na cestě ke zdravější, krásnější pleti a spokojenosti, protože sama vím,
+        jak velký vliv má stav pleti na to, jak se cítíme.
+      </p>
+
+      <p>
+        A protože se na pleti často odráží i náš vnitřní stav, postarám se o to,
+        abyste ze salonu odcházeli s pocitem radosti a hrdosti na to, že jste si
+        dopřáli chvilku jen pro sebe.
+      </p>
+
+      <p>
+        Můžete mě znát z mého Instagramového profilu Skincare na talíři, kde
+        předávám tipy, jak se starat o pleť. Mohli jste mě také vidět v
+        prestižních časopisech, jako jsou Elle, Žena a život či Perfect Women,
+        kde jsem publikovala své články. Dále jsem přispěla do novin a pro
+        Notino.
+      </p>
+    </div>
+    <div class="!px-0 lg:!px-[7vw]">
+      <div class="relative w-full">
+        <!-- Hlavní fotka -->
+        <img
+          src="/assets/images/img_1.png"
+          alt=""
+          class="relative w-3/5 pb-[60%] z-10"
+        />
+
+        <!-- Překrývající fotka -->
+        <img
+          src="/assets/images/img_2.png"
+          alt=""
+          class="absolute mx-0 px-0 bottom-0 right-0 w-3/5 z-0 pt-[60%]"
+        />
+      </div>
+    </div>
+  </div>
+
+  <h2 id="mark" class=" ">ošetření pleti</h2>
+
+  <div
+    class="w-full flex flex-col lg:flex-row flex-auto justify-normal my-12 items-stretch"
+  >
+    <div
+      class="max-lg:px-[10vw] lg:py-16 lg:pl-[14vw] lg:w-1/2 lg:bg-secondary"
+    >
+      <p>
+        Každé ošetření pečlivě přizpůsobuji aktuálnímu stavu a typu vaší pleti,
+        abyste vždy dostali péči, kterou vaše pleť opravdu potřebuje.
+        <b
+          >Postup ošetření vám vždy podrobně vysvětlím a cenu znáte dopředu –
+          chci, abyste se u mě cítili naprosto pohodlně a mohli si celou péči
+          bez obav užít.</b
+        >
+      </p>
+      <p>
+        <b>Ke každému ošetření patří také relaxační masáž hlavy a rukou</b>,
+        která pomáhá k uvolnění a prohloubení vašeho zážitku.
+        <b>Na závěr vás čeká krátká masáž zad</b> v rámci rituálu „návrat do
+        reality“, která vám umožní pohodlně vstát a odcházet s pocitem lehkosti
+        a pohody.
+      </p>
+    </div>
+
+    <div
+      class="w-full lg:w-auto lg:bg-secondary items-center justify-center flex max-lg:py-8 lg:px-[7vw]"
+    >
+      <a class="btn flex" href="/sluzby"
+        >služby a ceny
+        <img
+          class="ml-4"
+          src="/assets/svgs/Arrow.svg"
+          alt="arrow"
+          width="32"
+          height="23"
+          loading="lazy"
+          decoding="async"
+          aria-hidden="true"
+          draggable="false"
+      /></a>
+    </div>
+  </div>
+
+  <div class="split">
+    <div class="!px-0 lg:!px-[7vw]">
+      <div class="relative w-full">
+        <!-- Hlavní fotka -->
+        <img
+          src="/assets/images/img_3.png"
+          alt=""
+          class="relative w-3/5 pb-[60%] z-10"
+        />
+
+        <!-- Překrývající fotka -->
+        <img
+          src="/assets/images/img_4.png"
+          alt=""
+          class="absolute mx-0 px-0 bottom-0 right-0 w-3/5 z-0 pt-[60%]"
+        />
+      </div>
+    </div>
+    <div class="!px-0">
+      <div
+        class="w-full flex lg:outline outline-1 border-black items-center max-lg:justify-center py-8 lg:py-40"
+      >
+        <a class="btn flex lg:ml-[clamp(2rem,10vw,48rem)] my-8" href="/salon"
+          >salon ve srubu
+          <img
+            class="ml-4"
+            src="/assets/svgs/Arrow.svg"
+            alt="arrow"
+            width="32"
+            height="23"
+            loading="lazy"
+            decoding="async"
+            aria-hidden="true"
+            draggable="false"
+        /></a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock body %}

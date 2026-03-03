@@ -1,14 +1,13 @@
 export default {
-  name: "Senoweb",
-  email: "info@senoweb.cz",
+  name: "KH - kosmetické studio",
+  email: "hromadkova.krista@seznam.cz",
   ico: "19538685",
-  phoneForTel: "+420731736631",
-  phoneFormatted: "+420 731 736 631",
+  phoneForTel: "+420737748385",
+  phoneFormatted: "+420 737 748 385",
   address: {
-    lineOne: "Třebovská 123",
-    city: "Ústí nad Orlicí",
-    zip: "56203",
-    mapLink: "https://maps.app.goo.gl/GQmwqUWKd6JMZi8Y7",
+    lineOne: "Veselí 144",
+    city: "Přelouč",
+    zip: "53501",
   },
   socials: {
     facebook: "https://www.facebook.com/",
@@ -18,7 +17,7 @@ export default {
     whatsapp: "https://wa.me/"
   },
   //! Make sure you include the file protocol (e.g. https://) and that NO TRAILING SLASH is included
-  domain: "https://www.senoweb.cz",
+  domain: "https://www.kh-kosmetika.cz",
   // Passing the isProduction variable for use in HTML templates
   isProduction: process.env.ELEVENTY_ENV === "PROD",
 };

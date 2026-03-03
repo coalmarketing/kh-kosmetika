@@ -13,10 +13,13 @@ module.exports = {
         screens: screens,
         extend: {
             fontFamily: {
-                "sans": ["Poppins", defaultTheme.fontFamily.sans]
+                "baskervville": ["Baskervville", defaultTheme.fontFamily.sans],
+                "barlow": ["Barlow", "sans-serif"],
             },
             colors: {
-                primary: "#E11D48"
+                primary: "#D0B4A2",
+                secondary: "#E2DDD6",
+                grey: "#707070"
             }
         },
     },

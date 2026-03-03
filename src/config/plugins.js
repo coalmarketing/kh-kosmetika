@@ -34,3 +34,4 @@ export const configImages = {
     urlPath: "/assets/images",
     outputDir: "public/assets/images"
 };
+
