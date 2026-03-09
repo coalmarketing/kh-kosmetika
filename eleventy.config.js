@@ -175,6 +175,36 @@ export default (eleventyConfig) => {
      */
     eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
+    eleventyConfig.addCollection("terminy", function (collectionApi) {
+        // 1. Získáme dnešní datum a vynulujeme čas (půlnoc dnešního dne)
+        const dnes = new Date();
+        dnes.setHours(0, 0, 0, 0);
+
+        return collectionApi.getFilteredByGlob("./src/content/terminy/*.md")
+            .filter(item => {
+                // Kontrola publikování
+                if (item.data.published !== true) return false;
+                // 2. Vezmeme datum ze souboru a taky ho "vynulujeme" na půlnoc
+                // Eleventy u pole 'date' v MD automaticky vytváří JS Date objekt
+                const datumTerminu = new Date(item.date);
+                datumTerminu.setHours(0, 0, 0, 0);
+                // 3. Porovnání: Dnes nebo v budoucnu
+                return datumTerminu >= dnes;
+            })
+            .sort((a, b) => a.date - b.date);
+    });
+
+    // Jednoduchý filtr pro české datum bez knihovny
+    eleventyConfig.addFilter("ceskeDatum", function (dateObj) {
+        const d = new Date(dateObj);
+        return d.toLocaleDateString('cs-CZ', {
+            day: 'numeric',
+            month: 'long',
+            year: 'numeric'
+        });
+    });
+
+
     // ═════════════════════════════════════════════════════════════════════════
     // BUILD CONFIGURATION
     // Define input/output directories and template engine
@@ -190,3 +220,4 @@ export default (eleventyConfig) => {
         htmlTemplateEngine: "njk", // Nunjucks for HTML templates
     };
 };
+
