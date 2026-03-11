@@ -40,57 +40,103 @@
   </div>
 
   <div
-    class="tabs flex flex-col items-stretch w-full lg:flex-row px-8 my-8 md:my-16 sm:px-[clamp(4rem,10vw,14rem)] lg:px-[14vw]"
+    class="w-full lg:flex-row px-8 my-8 md:my-16 sm:px-[clamp(4rem,10vw,14rem)] lg:px-[14vw]"
   >
-    <div class="flex-auto lg:pr-28">
-      <ul>
-        <li>
-          <a href=""
-            ><span>Chci <u>první</u> ošetření</span></a
-          >
-        </li>
-        <li>
-          <a class="active" href=""
-            ><span>Chci <u>základní</u> ošetření</span></a
-          >
-        </li>
-        <li>
-          <a href=""
-            ><span>Chci <u>intenzivní</u> ošetření</span></a
-          >
-        </li>
-        <li><a href="">Lifting</a></li>
-        <li><a href="">Peeling</a></li>
-        <li><a href="">Doplňkové služby</a></li>
-      </ul>
-    </div>
-    <div class="flex-auto">
-      <p class="text-2xl leading-loose">2 100 Kč<br />90 min.</p>
+    <div>
+      <div
+        x-data="{ active: 'cenik-1' }"
+        class="pricelist w-full grid grid-cols-1 lg:grid-cols-[minmax(280px,30%)_1fr]"
+      >
+        {% for kategorie in collections.pricelist | sortByOrder %}
 
-      <p>
-        Základní ošetření je ideální volbou pro klienty, kteří kosmetiku
-        Cosmedix zatím doma nepoužívají.
-      </p>
-      <p>
-        Cílem ošetření je poznání pleti, její důkladné vyčištění a nastavení
-        správné péče podle aktuálního stavu a potřeb.
-      </p>
-      <ul>
-        Průběh ošetření:
-        <li>konzultace k pleti a zhodnocení jejího stavu</li>
-        <li>dvoufázové čištění pleti</li>
-        <li>hloubkové čištění pomocí ultrazvukové špachtle</li>
-        <li>
-          uvolňující masáž obličeje olejem vybraným dle typu a stavu pleti
-        </li>
-        <li>maska přizpůsobená aktuálním potřebám pleti</li>
-        <li>krátká relaxační masáž hlavy a rukou</li>
-        <li>aplikace séra a závěrečného krému</li>
-      </ul>
-      <p>
-        Toto ošetření poskytuje pleti pevný základ a připravuje ji na
-        intenzivnější péči.
-      </p>
+        <a
+          href="#cenik-{{ loop.index }}"
+          @click.prevent="active = 'cenik-{{ loop.index }}'"
+          :class="active === 'cenik-{{ loop.index }}' ? 'bg-secondary' : ''"
+          class="tab lg:col-start-1 p-4 border-b lg:border-none transition-colors"
+        >
+          {{ kategorie.data.service }}
+        </a>
+
+        <div
+          id="cenik-{{ loop.index }}"
+          x-show="active === 'cenik-{{ loop.index }}'"
+          x-transition:enter="transition ease-out duration-200"
+          x-transition:enter-start="opacity-0 -translate-y-6"
+          x-transition:enter-end="opacity-100 translate-y-0"
+          class="lg:ml-28 lg:col-start-2 lg:row-start-1 lg:row-span-10"
+        >
+          {% if kategorie.data.display_list == true %}
+
+          <table class="mb-8 w-full">
+            {% for s in kategorie.data.item %}
+            <tr>
+              <td>
+                {{ s.item }} {% if s.duration > 0 %} &nbsp;({{ s.duration }}
+                min.){% endif %}
+              </td>
+              <td class="text-right">{{ s.value }} Kč</td>
+            </tr>
+            {% endfor %}
+          </table>
+
+          {% else %} {% if kategorie.data.item.length > 1 %}
+          <div class="embla overflow-hidden">
+            <div class="embla__container flex">
+              {% endif %} {% for s in kategorie.data.item %}
+
+              {% if kategorie.data.item.length > 1 %}
+<div class="embla__slide flex-[0_0_100%]">
+              
+              {% else %}
+<div class="mb-8">
+              {% endif %}
+
+                <p class="text-2xl leading-loose">
+                  {{ s.value }} Kč {% if s.duration > 0 %} <br />{{ s.duration
+                  }} min. {% endif %}
+                </p>
+                {{ s.description | markdown | safe }}
+              </div>
+
+              {% endfor %} {% if kategorie.data.item.length > 1 %}
+            </div>
+          </div>
+
+          <div class="flex items-center justify-left my-8 max-lg:justify-center gap-6">
+            <button class="embla-prev bg-primary hover:bg-secondary transition-colors duration-300 ease-in-out outline outline-1 aspect-square z-10 p-2 rounded-full">
+              <img
+                class="rotate-180 transition-none"
+                src="/assets/svgs/Arrow.svg"
+                alt="arrow"
+                width="32"
+                height="23"
+                loading="lazy"
+                decoding="async"
+                aria-hidden="true"
+                draggable="false"
+              />
+            </button>
+
+            <span class="text-xl font-baskervville">vyberte si z<br />více variant</span>
+
+            <button class="embla-next bg-primary hover:bg-secondary transition-colors duration-300 ease-in-out outline outline-1 aspect-square z-10 p-2 rounded-full">
+              <img
+                src="/assets/svgs/Arrow.svg"
+                alt="arrow"
+                width="32"
+                height="23"
+                loading="lazy"
+                decoding="async"
+                aria-hidden="true"
+                draggable="false"
+              />
+            </button>
+          </div>
+          {% endif %} {% endif %}
+        </div>
+        {% endfor %}
+      </div>
     </div>
   </div>
 
