@@ -47,6 +47,23 @@
     @apply list-disc list-outside ml-6;
   }
 
+  .title-underline {
+    @apply relative mb-6 pb-4;
+  }
+
+  .title-underline::after {
+    content: "";
+    @apply absolute bottom-0 -left-8 sm:-left-[clamp(4rem,10vw,14rem)] w-[50vw] h-[2px] bg-gray-300 lg:hidden;
+  }
+
+  .embla {
+    @apply max-sm:-mx-8 max-lg:-mx-[clamp(4rem,10vw,14rem)];
+  }
+
+  .embla .embla__slide {
+    @apply max-sm:px-8 max-lg:px-[clamp(4rem,10vw,14rem)];
+  }
+
   .pricelist table tr {
     @apply border-b-[1px];
   }
