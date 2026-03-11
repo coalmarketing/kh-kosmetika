@@ -1,0 +1,52 @@
+name: Cleanup Prošlých Termínů
+
+on:
+  schedule:
+    # Spouští se každý den v 01:00 ráno
+    - cron: "0 1 * * *"
+  workflow_dispatch: # Umožňuje spustit ručně tlačítkem v GitHub Actions
+
+jobs:
+  delete-old-files:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Nutné pro mazání a commitování
+
+    steps:
+      - name: Checkout repozitáře
+        uses: actions/checkout@v4
+
+      - name: Smazat staré .md soubory
+        run: |
+          # Získání dnešního data ve formátu YYYY-MM-DD
+          TODAY=$(date +%Y-%m-%d)
+          echo "Dnešní datum: $TODAY"
+
+          # Cesta ke složce s termíny
+          TARGET_DIR="src/content/terminy"
+
+          # Projít všechny .md soubory v dané složce
+          find "$TARGET_DIR" -name "*.md" -type f | while read -r file; do
+            # Vytáhnout řádek s 'date:' a z něj pak samotné datum
+            FILE_DATE=$(grep "^date:" "$file" | sed 's/date: //')
+            
+            # Pokud datum existuje a je starší než dnešní
+            if [[ -n "$FILE_DATE" && "$FILE_DATE" < "$TODAY" ]]; then
+              echo "Mažu soubor: $file (datum $FILE_DATE je starší než $TODAY)"
+              rm "$file"
+            fi
+          done
+
+      - name: Commit a Push změn
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Zkontrolovat, zda jsou nějaké změny k uložení
+          if [[ -n "$(git status --porcelain)" ]]; then
+            git add .
+            git commit -m "chore: automatické smazání prošlých termínů"
+            git push
+          else
+            echo "Žádné soubory k smazání nebyly nalezeny."
+          fi
