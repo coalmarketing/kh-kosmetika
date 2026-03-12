@@ -32,17 +32,18 @@
   </button>
 
   <div class="flex flex-col gap-16 px-16">
-    <img
-      class="w-[250px]"
-      src="/assets/svgs/Logo.svg"
-      alt="KH - kosmetické studio"
-      width="420"
-      height="210"
-      loading="lazy"
-      decoding="async"
-      aria-hidden="true"
-      draggable="false"
-    />
+    <a href="/" title="na úvod" class="cursor-pointer after:hidden"
+      ><img
+        class="w-[250px]"
+        src="/assets/svgs/Logo.svg"
+        alt="KH - kosmetické studio"
+        width="420"
+        height="210"
+        loading="lazy"
+        decoding="async"
+        aria-hidden="true"
+        draggable="false"
+    /></a>
 
     <nav>
       <ul class="flex flex-col text-3xl italic">
@@ -50,7 +51,8 @@
         <li><a href="{% if page.url != '/' %}/{% endif %}#o-mne">o mně</a></li>
         <li><a href="/sluzby">služby</a></li>
         <li><a href="/salon">salon</a></li>
-        <li><a href="#kontakt"> kontakt </a></li>
+        <li><a href="/pred-a-po">před a po</a></li>
+        <li><a href="#kontakt">kontakt</a></li>
         <li class="pt-16">
           <a href="/uvolnene-terminy">uvolněné<br />termíny</a>
         </li>

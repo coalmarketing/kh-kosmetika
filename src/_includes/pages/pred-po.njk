@@ -1,0 +1,84 @@
+{% extends "layouts/base.njk" %} {% block body %}
+
+<!-- PRED A PO  -->
+
+<section id="pred-a-po">
+  <div class="hero ~pt-16/24">
+    <a href="/" title="na úvod" class="cursor-pointer after:hidden"
+      ><img
+        class="m-auto w-[300px] max-w-[50%] -mb-[2px]"
+        src="/assets/svgs/Logo.svg"
+        alt="KH - kosmetické studio"
+        width="420"
+        height="210"
+        loading="lazy"
+        decoding="async"
+        aria-hidden="true"
+        draggable="false"
+    /></a>
+  </div>
+
+  <h2>výsledky</h2>
+
+  <div class="lg:w-1/2">
+    <div class="max-lg:px-[10vw] lg:pl-[14vw]">
+      <p>
+        Zde najdete aktuálně uvolněné termíny na poslední chvíli. Pokud máte o
+        některý zájem, kontaktujte mě prosím ideálně sms zprávou.
+      </p>
+      <p>
+        Termíny jsou omezené a bývají rychle obsazené, proto doporučuji ozvat se
+        co nejdříve.
+      </p>
+      <div id="terminy">
+        <ul>
+          {% for termin in collections.terminy %}
+          <li>
+            {{ termin.data.date | ceskeDatum(termin.data.date) }} v {{
+            termin.data.start }} – {{ termin.data.end }}
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="w-full flex lg:flex-row flex-auto justify-normal my-12 items-stretch max-lg: flex-col-reverse"
+  >
+    <div
+      class="max-lg:px-[10vw] lg:py-16 lg:pl-[14vw] lg:w-1/2 lg:bg-secondary"
+    >
+      <p>
+        Většinu času se věnuji péči o vás své klientky, a proto se může stát, že
+        mě právě nezastihnete na telefonu.
+      </p>
+      <p>
+        Pokud máte zájem o některý z aktuálně uvolněných termínů, prosím,
+        napište mi SMS zprávu.
+      </p>
+      <p>Jakmile budu mít telefon opět u sebe, co nejdříve vám odpovím.</p>
+      <p>Děkuji za pochopení a těším se na vás.</p>
+    </div>
+
+    <div
+      class="w-full lg:w-auto lg:bg-secondary items-center justify-center flex max-lg:py-8 lg:px-[7vw]"
+    >
+      <a class="btn flex" href="tel:{{ client.phoneForTel }}"
+        >napište mi sms
+        <img
+          class="ml-4"
+          src="/assets/svgs/Icon_sms.svg"
+          alt="arrow"
+          width="32"
+          height="23"
+          loading="lazy"
+          decoding="async"
+          aria-hidden="true"
+          draggable="false"
+      /></a>
+    </div>
+  </div>
+</section>
+
+{% endblock body %}
