@@ -32,12 +32,13 @@
       </p>
       <div id="terminy">
         <ul>
-          {% for termin in collections.terminy %}
+          {% for termin in collections.terminy %} {% if termin.data.published ==
+          true %}
           <li>
             {{ termin.data.date | ceskeDatum(termin.data.date) }} v {{
             termin.data.start }} – {{ termin.data.end }}
           </li>
-          {% endfor %}
+          {% endif %} {% endfor %}
         </ul>
       </div>
     </div>
