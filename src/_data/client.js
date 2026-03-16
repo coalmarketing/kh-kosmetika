@@ -11,7 +11,10 @@ export default {
   },
   socials: {
     facebook: "https://www.facebook.com/",
-    instagram: "https://www.instagram.com/",
+    instagram: [
+      "https://www.instagram.com/cesta_ke_krasne_pleti_salon",
+      "https://www.instagram.com/skincare_na_taliri"
+    ],
     youtube: "https://www.youtube.com/",
     tiktok: "https://www.tiktok.com/",
     whatsapp: "https://wa.me/"

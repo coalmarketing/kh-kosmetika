@@ -84,6 +84,20 @@
     @apply my-16;
   }
 
+  .result {
+    @apply flex flex-wrap lg:flex-nowrap;
+  }
+
+  .result h3 {
+    @apply w-full lg:w-auto order-1 lg:order-2 items-start text-4xl;
+  }
+  .result div:first-of-type {
+    @apply w-1/2 pr-[1vw] lg:flex-1 order-2 lg:order-1;
+  }
+  .result div:last-of-type {
+    @apply w-1/2 pl-[1vw] lg:flex-1 order-3 lg:order-3;
+  }
+
   .split {
     @apply w-full flex flex-col lg:flex-row flex-auto items-center justify-normal;
   }
