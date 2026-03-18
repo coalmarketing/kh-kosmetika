@@ -1,6 +1,6 @@
 ---
 service: Doplňkové služby
-sort: 10
+sort: 6
 item:
   - sort: 10
     value: 150
