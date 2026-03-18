@@ -75,5 +75,5 @@ item:
       * dlouhodobá anti-age péče
     value: 2500
     duration: 60
-display_list: true
+display_list: false
 ---
