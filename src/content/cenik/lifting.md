@@ -1,6 +1,6 @@
 ---
 service: Lifting
-sort: 5
+sort: 4
 item:
   - item: Manuální lifting obličeje - ZÁKLADNÍ
     value: 1500
