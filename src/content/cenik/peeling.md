@@ -1,6 +1,6 @@
 ---
 service: Peeling
-sort: 10
+sort: 5
 item:
   - item: Metabolický peeling – Level 1
     value: 1500
