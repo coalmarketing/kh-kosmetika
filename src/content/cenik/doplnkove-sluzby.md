@@ -6,15 +6,15 @@ item:
     value: 150
     item: Formování obočí
   - item: Depilace nad horním rtem
-    value: 127
+    value: 150
     duration: ""
   - item: Depilace brada
-    value: 135
+    value: 150
     duration: ""
   - item: Barvení obočí
-    value: 187
+    value: 250
   - item: Barvení řas
-    value: 236
+    value: 250
   - item: Intenzivní maska na pleť s okamžitým efektem
     value: 450
   - item: Retinoidy
