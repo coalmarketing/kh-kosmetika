@@ -51,8 +51,18 @@ item:
       **Deep Sea Peel** obsahuje spikuliny – mikroskopické jehličky z mořských
       hub, které jemně stimulují pleť a vytvářejí mikrokanálky. Díky tomu
       dochází k **intenzivní regeneraci pleti a hlubšímu působení aktivních
-      látek**.\
+      látek**. Vhodné pro problematickou, aknózní, mastnou, zanesenou ,velmi
+      unavenou pleť, pro plet s pigmentací a vrásky.
 
-      Vhodné pro problematickou, aknózní, mastnou, zanesenou ,velmi unavenou pleť, pro plet s pigmentací a vrásky.
+
+      * radost z hladké pleti
+
+      * stimulace buněčné obnovy pomocí spikulin
+
+      * podpora vstřebávání aktivních látek do hlubších vrstev pleti
+
+      * redukce akné, zánětů a ucpaných pórů
+
+      * sjednocení tónu a výrazné rozjasnění a ústup pigmentací
 display_list: false
 ---
