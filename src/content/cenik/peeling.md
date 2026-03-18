@@ -64,5 +64,7 @@ item:
       * redukce akné, zánětů a ucpaných pórů
 
       * sjednocení tónu a výrazné rozjasnění a ústup pigmentací
+
+      * podpora přirozené tvorby kolagenu
 display_list: false
 ---
