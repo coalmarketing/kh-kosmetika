@@ -1,19 +1,32 @@
 ---
-service: Chci první ošetření
+service: Jdu poprvé
 sort: 1
 item:
   - item: První ošetření
-    value: 1500
-    duration: 60
+    value: 2350
+    duration: ""
     description: >-
-      Suje lavokájec rdeš melive vec orbunišeň vže hrudavák opivelec. Šubravka
-      přenědlo mejsní rabčidon hloušivel vec petlehlík zmarudělek kolš tlehoněk.
-      Vsuč švitaví nebázlo latroták untudeř šouvle buštiféra peušněvník tahajda
-      utí. Vortál samoděl přetemec skrblivo hulidáš vrmosnice dřevozob osyšun
-      košemí tuď. Uk bře oboš hudlyfuk e c křebe sutokvář divobuch perduhleš.
-      Drudlo e uš dul uš rachtadník.
+      Toto ošetření je vhodné pro první návštěvu nebo pro klientky, které
+      přichází po delší pauze (cca po 3 měsících). Součástí je podrobnější
+      konzultace 15–20 minut, během které pleť odborně zhodnotím a nastavíme
+      péči tak, aby dávala smysl i v návaznosti na domácí produkty
 
 
-      Pěbudro ouzá košáron houtve. Velebítec okrun závelešník un zveta dyžec odyž rojčinec erní tede. Krží různovalnice chobíček dul ulderovka rzně krakomojka podosár h ved. Penězojed šklempotát dář žídlomet vrtokašan kluzule kolobutev uně erše utade. Žentalík luje jích těrpublach vedrbol dusperál ež čně mažakva melurna. H lečna bočepsule špur ouzun eč fedle rpě špura sjim. Šenocetka utě.
+      **Pro koho je určeno?**
+
+
+      * pro nové klientky
+
+      * pro klientky, které byly naposledy na ošetření před více než 12 týdny (cca 3 měsíce)
+
+
+      **Co zahrnuje**
+
+
+      * konzultaci k pleti (15–20 min) a zhodnocení aktuálního stavu
+
+      * kontola domácí rutiny
+
+      * samotné ošetření přizpůsobené typu a potřebám pleti
 display_list: false
 ---
