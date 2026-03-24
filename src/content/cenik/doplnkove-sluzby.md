@@ -15,7 +15,7 @@ item:
     value: 250
   - item: Barvení řas
     value: 250
-  - item: Intenzivní maska na pleť s okamžitým efektem
+  - item: Intenzivní maska na pleť s delším viditelným efektem
     value: 450
   - item: Retinoidy
     value: 150
