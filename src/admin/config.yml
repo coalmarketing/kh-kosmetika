@@ -86,8 +86,7 @@ collections:
 
           - label: "Trvání (minuty)"
             name: "duration"
-            widget: "number"
-            value_type: "int"
+            widget: "string"
             required: false
 
           - label: "Popis služby"

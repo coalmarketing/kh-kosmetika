@@ -46,6 +46,7 @@
     <div>
       <div
         x-data="{ active: 'cenik-1' }"
+        x-effect="window.dispatchEvent(new CustomEvent('tab-changed'))"
         class="pricelist w-full grid grid-cols-1 lg:grid-cols-[minmax(280px,30%)_1fr]"
       >
         {% for kategorie in collections.pricelist | sortByOrder %}
@@ -82,6 +83,42 @@
           </table>
 
           {% else %} {% if kategorie.data.item.length > 1 %}
+          
+          <div class="flex items-center justify-left my-8 max-lg:justify-center gap-6">
+            <button class="embla-prev bg-primary hover:bg-secondary transition-colors duration-300 ease-in-out outline outline-1 aspect-square z-10 p-2 rounded-full">
+              <img
+                class="rotate-180 transition-none"
+                src="/assets/svgs/Arrow.svg"
+                alt="arrow"
+                width="32"
+                height="23"
+                loading="lazy"
+                decoding="async"
+                aria-hidden="true"
+                draggable="false"
+              />
+            </button>
+
+            <div>
+            <span class="text-xl font-baskervville leading-none">vyberte si z<br />více variant</span>
+            <div class="embla__dots flex gap-2 mt-2"></div>
+            </div>
+
+            
+            <button class="embla-next bg-primary hover:bg-secondary transition-colors duration-300 ease-in-out outline outline-1 aspect-square z-10 p-2 rounded-full">
+              <img
+                src="/assets/svgs/Arrow.svg"
+                alt="arrow"
+                width="32"
+                height="23"
+                loading="lazy"
+                decoding="async"
+                aria-hidden="true"
+                draggable="false"
+              />
+            </button>
+          </div>
+          
           <div class="embla overflow-hidden">
             <div class="embla__container flex">
               {% endif %} {% for s in kategorie.data.item %}
@@ -102,37 +139,6 @@
 
               {% endfor %} {% if kategorie.data.item.length > 1 %}
             </div>
-          </div>
-
-          <div class="flex items-center justify-left my-8 max-lg:justify-center gap-6">
-            <button class="embla-prev bg-primary hover:bg-secondary transition-colors duration-300 ease-in-out outline outline-1 aspect-square z-10 p-2 rounded-full">
-              <img
-                class="rotate-180 transition-none"
-                src="/assets/svgs/Arrow.svg"
-                alt="arrow"
-                width="32"
-                height="23"
-                loading="lazy"
-                decoding="async"
-                aria-hidden="true"
-                draggable="false"
-              />
-            </button>
-
-            <span class="text-xl font-baskervville">vyberte si z<br />více variant</span>
-
-            <button class="embla-next bg-primary hover:bg-secondary transition-colors duration-300 ease-in-out outline outline-1 aspect-square z-10 p-2 rounded-full">
-              <img
-                src="/assets/svgs/Arrow.svg"
-                alt="arrow"
-                width="32"
-                height="23"
-                loading="lazy"
-                decoding="async"
-                aria-hidden="true"
-                draggable="false"
-              />
-            </button>
           </div>
           {% endif %} {% endif %}
         </div>

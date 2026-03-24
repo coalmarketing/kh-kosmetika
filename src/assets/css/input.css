@@ -64,6 +64,18 @@
     @apply max-sm:px-8 max-lg:px-[clamp(4rem,10vw,14rem)];
   }
 
+  .embla__dots {
+    @apply flex justify-center align-middle gap-4;
+  }
+
+  .embla__dot {
+    @apply w-2 h-2 rounded-full bg-secondary cursor-pointer;
+  }
+
+  .embla__dot.is-active {
+    @apply bg-primary;
+  }
+
   .pricelist table tr {
     @apply border-b-[1px];
   }
