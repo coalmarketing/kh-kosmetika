@@ -1,5 +1,5 @@
 ---
-service: Peeling
+service: Metabolický peeling
 sort: 5
 item:
   - item: Metabolický peeling – Level 1
@@ -10,9 +10,6 @@ item:
       aktivují buněčný metabolismus a zlepšují její strukturu, tón i celkovou
       kvalitu. Ošetření jsou šetrná, ale velmi účinná – **bez nutnosti
       rekonvalescence.**
-
-
-      **Ideální jako vstupní ošetření** a prevence stárnutí pleti
 
 
       * rozjasnění a osvěžení pleti
