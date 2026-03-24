@@ -81,22 +81,50 @@
             >Dřevěný srub ve Veselí u Přelouče<br /></span
           >{{ client.address.lineOne }}<br />{{ client.address.zip }} {{
           client.address.city }}
-          <a
-            href="{{ client.socials.instagram }}"
-            class="absolute right-0 bottom-[50%] -mb-[25px] lg:right-[14vw] lg:-bottom-20 hover:scale-150 transition-all duration-300"
-            title="Instagram"
+
+          <div
+            class="absolute right-0 top-0 lg:top-32 lg:right-[16vw] flex flex-col gap-4"
           >
-            <img
-              src="/assets/svgs/Icon_IG.svg"
-              alt="instagram"
-              width="50"
-              height="50"
-              loading="lazy"
-              decoding="async"
-              aria-hidden="true"
-              draggable="false"
-            />
-          </a>
+            <a
+              href="https://www.instagram.com/cesta_ke_krasne_pleti_salon"
+              class="flex items-center gap-3 group transition-all duration-300"
+              title="KH - kosmetický salon"
+            >
+              <img
+                src="/assets/svgs/Icon_IG.svg"
+                alt="instagram"
+                width="35"
+                height="35"
+                class="group-hover:scale-110 transition-transform"
+                loading="lazy"
+                decoding="async"
+                aria-hidden="true"
+                draggable="false"
+              />
+              <span class="text-sm leading-tight hidden sm:block">Salon</span>
+            </a>
+
+            <a
+              href="https://www.instagram.com/skincare_na_taliri"
+              class="flex items-center gap-3 group transition-all duration-300"
+              title="Skincare na talíři"
+            >
+              <img
+                src="/assets/svgs/Icon_IG.svg"
+                alt="instagram"
+                width="35"
+                height="35"
+                class="group-hover:scale-110 transition-transform"
+                loading="lazy"
+                decoding="async"
+                aria-hidden="true"
+                draggable="false"
+              />
+              <span class="text-sm leading-tight hidden sm:block"
+                >Rady a tipy</span
+              >
+            </a>
+          </div>
         </div>
       </div>
 
