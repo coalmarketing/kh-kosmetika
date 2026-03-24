@@ -4,7 +4,7 @@ sort: 1
 item:
   - item: Jdu poprvé
     value: 2350
-    duration: -78
+    duration: "120"
     description: >-
       Toto ošetření je vhodné pro první návštěvu nebo pro klientky, které
       přichází po delší pauze (cca po 3 měsících). Součástí je podrobnější
