@@ -1,5 +1,5 @@
 ---
-service: Lifting
+service: Manuální lifting
 sort: 4
 item:
   - item: Manuální lifting obličeje - ZÁKLADNÍ
