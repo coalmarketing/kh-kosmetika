@@ -41,6 +41,6 @@ item:
       Intenzivní péče přináší hlubší regeneraci, sjednocení tónu pleti a dlouhodobější efekt, který je viditelný již po prvním ošetření.
     item: Chci viditelný efekt a rychlejší účinky
     value: 2500
-    duration: 105-120
+    duration: 105-120 min.
 display_list: false
 ---
