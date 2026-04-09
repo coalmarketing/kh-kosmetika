@@ -37,9 +37,10 @@ item:
       * intenzivnější relaxační masáž hlavy a rukou hydratační maskou na ruce
 
 
+
       Intenzivní péče přináší hlubší regeneraci, sjednocení tónu pleti a dlouhodobější efekt, který je viditelný již po prvním ošetření.
     item: Chci viditelný efekt a rychlejší účinky
     value: 2500
-    duration: 105-120 min.
+    duration: 105-120
 display_list: false
 ---
