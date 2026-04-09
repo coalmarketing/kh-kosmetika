@@ -115,7 +115,7 @@ collections:
     editor:
       preview: false
     fields:
-      - { label: "Layout", name: "layout", widget: "hidden", default: "null" }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "false" }
       - {
           label: "Permalink",
           name: "permalink",
